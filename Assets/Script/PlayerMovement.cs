@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,22 +17,22 @@ public class PlayerMovement : MonoBehaviour
 
     void WASDMove()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Keyboard.current.wKey.isPressed)
         {
             transform.position += new Vector3(0, 0.002f, 0);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Keyboard.current.sKey.isPressed)
         {
             transform.position += new Vector3(0, -0.002f, 0);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Keyboard.current.aKey.isPressed)
         {
             transform.position += new Vector3(-0.002f, 0, 0);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Keyboard.current.dKey.isPressed)
         {
             transform.position += new Vector3(0.002f, 0, 0);
         }
